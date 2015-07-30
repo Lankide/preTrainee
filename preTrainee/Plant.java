@@ -23,7 +23,6 @@ public class Plant extends Product {
 	}
 
 	public Plant() {
-		super();
 		lengthPlant = 0;
 		cultivarPlant = "";
 	}

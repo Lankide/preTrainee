@@ -16,7 +16,7 @@ public abstract class Product{
 		return idProduct;
 	}
 
-	@SuppressWarnings("unused")
+	// Product ID should not be changed from any other class
 	private void setIdProduct(long id) {
 		idProduct = id;
 	}

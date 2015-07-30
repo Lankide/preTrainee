@@ -8,37 +8,35 @@ public class Storage {
 
 	ArrayList<Product> storage = new ArrayList<Product>();
 
-	public void Add(Product product) {
+	public void add(Product product) {
 		storage.add(product);
 	}
-//return total amount of products in the shop
-	public int Count() {
+
+	// Returns total amount of products in the shop
+	public int count() {
 		int result = 0;
 		for (Product product : storage) {
-			result = result + product.getTotalAmount();
+			result += product.getTotalAmount();
 		}
 		return result;
 	}
 
 	static Comparator<Product> comparatorProduct = new Comparator<Product>() {
 		public int compare(Product o1, Product o2) {
-			return o1.getPriceProduct() - (o2.getPriceProduct());
+			return o1.getPriceProduct() - o2.getPriceProduct();
 		}
 	};
 
-	public void SortPrice() {
+	public void sortPrice() {
 		Collections.sort(storage, comparatorProduct);
 	}
 
-	// return "null" - if the index is out of range (index<0||index>=size())
+	// Returns "null" if the index is out of range
 	public Product getProduct(int index) {
-		if (index < 0)
-			return null;
-		else
-			return (index > storage.size()) ? null : storage.get(index);
+		return (index < 0 || index >= storage.size()) ? null : storage.get(index);
 	}
 
-	public void Print() {
+	public void print() {
 		for (Product product : storage) {
 			System.out.println(product);
 		}

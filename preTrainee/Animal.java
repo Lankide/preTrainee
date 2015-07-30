@@ -10,8 +10,8 @@ public class Animal extends Product {
 		return ageAnimal;
 	}
 
-	public void setAgeAnimal(int ageAnimals) {
-		this.ageAnimal = ageAnimals;
+	public void setAgeAnimal(int ageAnimal) {
+		this.ageAnimal = ageAnimal;
 	}
 
 	public String getBreedAnimal() {
