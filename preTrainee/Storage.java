@@ -3,10 +3,11 @@ package preTrainee;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 
-public class Storage {
+public class Storage implements Iterable<Product>{
 
-	ArrayList<Product> storage = new ArrayList<Product>();
+	private ArrayList<Product> storage = new ArrayList<Product>();
 
 	public void add(Product product) {
 		storage.add(product);
@@ -40,5 +41,10 @@ public class Storage {
 		for (Product product : storage) {
 			System.out.println(product);
 		}
+	}
+
+	@Override
+	public Iterator<Product> iterator() {
+		return storage.iterator();
 	}
 }
